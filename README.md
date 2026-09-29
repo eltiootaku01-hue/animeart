@@ -38,3 +38,18 @@ El workflow de GitHub Actions también genera el APK debug como artefacto de la 
 ## Alcance de esta fase
 
 Esta fase solamente establece la infraestructura Android mínima. No contiene todavía editor, capas, imágenes, texto, stickers, crop, transformaciones, eliminación de fondo, sombras, undo/redo ni animación/GIF.
+
+
+## Primera compilación en Windows
+
+No necesitas conocer Gradle, Kotlin ni Android Studio para hacer la primera compilación.
+
+1. Instala **Java 17** si todavía no está instalado.
+2. Abre la carpeta del proyecto AnimeArt.
+3. Haz doble clic en **build_apk.bat**.
+4. Espera a que termine. La primera compilación puede tardar más porque Gradle descarga lo necesario.
+5. Si aparece **APK GENERADA CORRECTAMENTE**, busca la APK en:
+   app\build\outputs\apk\debug\app-debug.apk
+6. Para instalarla desde un Android conectado por USB, puedes ejecutar **install_apk.bat**. El script no instala software adicional y solo intenta usar ADB si ya está disponible.
+
+Si la compilación falla, no cierres ni ocultes el mensaje de error: ese texto sirve para diagnosticar el problema.
